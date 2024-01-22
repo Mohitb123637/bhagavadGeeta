@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Myboo from "./components/Myboo";
+import BgTexture from "./assets/bgI.jpg"
+const BgTextureStyle = {
+  backgroundImage: `url(${BgTexture})`,
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  minHeight: "100vh",
+  minWidth: "auto"
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div style={BgTextureStyle} className="w-full h-full flex justify-center items-center overflow-hidden">
+    <Myboo/>
+  </div>;
 }
 
 export default App;
